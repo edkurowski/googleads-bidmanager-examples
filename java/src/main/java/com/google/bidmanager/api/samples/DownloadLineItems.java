@@ -44,6 +44,7 @@ public class DownloadLineItems {
       // .setFilterIds(Arrays.asList(0L, 1L, 2L));
 
     // Call the API, getting the (filtered) list of line items.
+    dliRequest.setFileSpec("SDF");
     DownloadLineItemsResponse dliResponse =
         service.lineitems().downloadlineitems(dliRequest).execute();
     File to = new File("line_items.csv");
